@@ -1,0 +1,17 @@
+Sebelumnya (tampilan daftar tugas tanpa nomor tugas ):
+<span class="text-sm sm:text-base font-medium truncate select-none transition-all ${
+                        task.completed 
+                            ? 'line-through text-slate-400 font-normal' 
+                            : 'text-slate-700'
+                    }">
+                        ${escapeHtml(task.text)}
+                    </span>
+
+Setelahnya (Menambahkan indeks +1 di depan setiap tugas)
+<span class="text-sm sm:text-base font-medium truncate select-none transition-all ${
+                        task.completed 
+                            ? 'line-through text-slate-400 font-normal' 
+                            : 'text-slate-700'
+                    }">
+                        <strong class="text-indigo-600 mr-1">${tasks.indexOf(task) + 1}.</strong>${escapeHtml(task.text)}
+                    </span>
